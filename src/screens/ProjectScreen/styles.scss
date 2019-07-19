@@ -8,6 +8,10 @@
         flex-direction: row;
         justify-content: space-evenly;
 
+        .company-logo {
+            width: 100px;
+        }
+
         a {
             color: inherit;
         }

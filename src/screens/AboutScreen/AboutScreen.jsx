@@ -11,8 +11,15 @@ class AboutScreen extends React.Component {
   }
   render () {
     return  (
-      <div> AboutScreen component!</div>
+      <div className="aboutContainer">
+        <img className="nav-back" onClick={this._handleClick.bind(this)} src={require("../../images/left-arrow.png")} alt="back"></img>
+        <h2>About Me</h2>
+      </div>
     )
+  }
+
+  _handleClick() {
+    this.props.history.goBack();
   }
 }
 

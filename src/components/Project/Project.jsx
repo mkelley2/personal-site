@@ -44,7 +44,7 @@ class Project extends React.Component {
         <p><span className="highlight">Technology Stack:</span> { stack }</p>
         <p><span className="highlight">Job Description:</span> { currentProject.description }</p>
         {screenshots.length > 0 && <h4><span className="highlight">Screenshots:</span></h4>}
-        {screenshots.length > 0 && screenshots}
+        {screenshots.length > 0 && <div className="screenshots"> { screenshots } </div>}
       </div>
     )
   }
