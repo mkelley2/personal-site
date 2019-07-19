@@ -15,10 +15,10 @@ class ProjectScreen extends React.Component {
     return  (
       <div className="projectsContainer">
         <img className="nav-back" onClick={this._handleClick.bind(this)} src={require("../../images/left-arrow.png")} alt="back"></img>
-        <h2>Development Work Experience</h2>
+        <h2>Work Experience</h2>
         <div className="projectNav">
-          <a onClick={this._changeProject.bind(this, "cloudengage")} href="cloudengage"><img className="company-logo" alt="CloudEngage" src={require("../../images/cloudengage/cloudengage.webp")}></img></a>
-          <a onClick={this._changeProject.bind(this, "delane")} href="delane"><img className="company-logo" alt="CloudEngage" src={require("../../images/delane/delane.png")}></img></a>
+          <a onClick={this._changeProject.bind(this, "cloudengage")} href="cloudengage"><img className="company-logo" alt="CloudEngage" src={require("../../images/logos/cloudengage.webp")}></img></a>
+          <a onClick={this._changeProject.bind(this, "delane")} href="delane"><img className="company-logo" alt="Delane Studios" src={require("../../images/logos/delane.png")}></img></a>
         </div>
         <Project
           project={project} />
