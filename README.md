@@ -1,4 +1,4 @@
-[https://github.com/mkelley2/personal-site](Live Site)
+[Live Site](https://github.com/mkelley2/personal-site)
 
 ## Available Scripts
 
