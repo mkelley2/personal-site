@@ -1,0 +1,15 @@
+@import '../../styles/colors';
+
+.projectsContainer {
+    text-align: center;
+
+    .projectNav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+
+        a {
+            color: inherit;
+        }
+    }
+}

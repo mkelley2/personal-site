@@ -1,0 +1,18 @@
+@import '../../styles/colors';
+
+.projectContainer {
+    text-align: left;
+    margin: 50px;
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        a {
+            color: $teal;
+        }
+    }
+
+    img {
+        width: 100%;
+    }
+}
