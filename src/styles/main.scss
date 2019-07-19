@@ -16,6 +16,13 @@ body {
         position: absolute;
         margin: 0 auto;
 
+        a {
+            color: inherit;
+            &:hover {
+                color: $active;
+            }
+        }
+
         .highlight {
             color: $coral;
         }
