@@ -1,7 +1,7 @@
 import React from "react";
 import { Switch, Route, withRouter } from 'react-router';
 
-import { HomeScreen, ProjectScreen, AboutScreen } from './screens';
+import { HomeScreen, ProjectScreen, ContactScreen } from './screens';
 
 // const PrivateRoute = ({
 //   component: Component,
@@ -26,7 +26,7 @@ class Routes extends React.Component {
       <Switch>
         <Route exact path="/" component={HomeScreen}/>
         <Route exact path="/projects" component={ProjectScreen}/>
-        <Route exact path="/about" component={AboutScreen}/>
+        <Route exact path="/contact" component={ContactScreen}/>
       </Switch>
     )
   }

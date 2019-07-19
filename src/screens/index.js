@@ -1,11 +1,11 @@
 import Blank from './Blank'
 import HomeScreen from './HomeScreen';
 import ProjectScreen from './ProjectScreen';
-import AboutScreen from './AboutScreen';
+import ContactScreen from './ContactScreen';
 
 export {
     Blank,
     HomeScreen,
     ProjectScreen,
-    AboutScreen
+    ContactScreen
 };

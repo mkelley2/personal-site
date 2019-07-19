@@ -23,8 +23,8 @@ class Splash extends React.Component {
             name="projects"
             handleClick={handleClick}/>
           <Button
-            text="About me"
-            name="about"
+            text="How to contact"
+            name="contact"
             handleClick={handleClick}/>
         </div>
       </div>
