@@ -21,22 +21,17 @@ class HomeScreen extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-
+      scrollToContactOnLoad: this.props.location.state.scrollToContactOnLoad
     };
     this.projectSection = React.createRef();
     this.contactSection = React.createRef();
     this.scrollTo = this._scrollTo.bind(this);
 
   }
+
   componentDidMount() {
-    switch (this.props.history.location.search) {
-      case "?contact":
-        this._scrollTo(this.contactSection.current.offsetTop);
-        break;
-      case "?project":
-      default:
-        this._scrollTo(this.projectSection.current.offsetTop);
-        break;
+    if (this.state.scrollToContactOnLoad) {
+      this._scrollTo("contactSection");
     }
   }
 
@@ -87,19 +82,16 @@ class HomeScreen extends React.Component {
     )
   }
 
-  _scrollTo(e) {
-    if (e.target) {
-      let name= e.target.getAttribute("name"),
-        ref = this[name];
+  _scrollTo(name) {
+    let ref = this[name];
 
-      if (ref) {
-        window.scrollTo(0,(ref.current.offsetTop - 55));
-      } else if (name === "resume") {
-        console.log(name);
-      }
+    if (ref && ref.current) {
+      let offsetTop = ref.current.offsetTop + ((name === "contactSection") ? 250 : 0);
 
+      window.scrollTo(0,offsetTop);
+    } else if (name === "resume") {
+      console.log(name);
     }
-
   }
 }
 

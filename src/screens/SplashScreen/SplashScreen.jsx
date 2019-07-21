@@ -19,9 +19,10 @@ class SplashScreen extends React.Component {
     )
   }
 
-  _navigate(e) {
-    let contact = e.target.name === "contact" ? "?contact" : "";
-    this.props.history.push(`/main${contact}`);
+  _navigate(name) {
+    let contact = (name === "contactSection");
+
+    this.props.history.push(`/main`, { scrollToContactOnLoad: contact });
   }
 }
 

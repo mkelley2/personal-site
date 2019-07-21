@@ -20,11 +20,11 @@ class Splash extends React.Component {
           <h3>I am a full stack developer passionate about technology</h3>
           <Button
             text="My work"
-            name="projects"
+            name="projectSection"
             handleClick={handleClick}/>
           <Button
             text="Contact"
-            name="contact"
+            name="contactSection"
             handleClick={handleClick}/>
         </div>
       </div>

@@ -14,7 +14,7 @@ class Button extends React.Component {
 
     return  (
       <React.Fragment>
-        <button name={ name } onClick={ handleClick }>{ text }</button>
+        <button name={ name } onClick={ () => handleClick(name) }>{ text }</button>
       </React.Fragment>
     )
   }
