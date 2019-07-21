@@ -19,9 +19,9 @@ class Navbar extends React.Component {
       <div className="navContainer">
         { !isMobile && <SocialLinks mode="light" /> }
         <div className={ `navLinks ${ isMobile ? 'mobile': ''}` }>
-          <span name="projectSection" onClick={handleClick}>My Work</span>
-          <span name="contactSection" onClick={handleClick}>Contact</span>
           <span name="resume" onClick={handleClick}>Resume</span>
+          <span name="contactSection" onClick={handleClick}>Contact</span>
+          <span name="projectSection" onClick={handleClick}>My Work</span>
         </div>
       </div>
     )

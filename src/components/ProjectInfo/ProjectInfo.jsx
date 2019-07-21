@@ -10,19 +10,26 @@ class ProjectInfo extends React.Component {
     };
   }
   render () {
-    let {logo, body, demos } = this.props,
-      demoLinks = [];
+    let {logo, body, demos, stack } = this.props,
+      demoLinks = [],
+      bodyText = [],
+      stackText = stack.join(", ");
 
-    demos.forEach((demo, i) => {
-      demoLinks.push(
-        <span key={i} className="highlight" onClick={this._handleClick.bind(this, demo)}>Live Demo</span>
-      );
-    });
+      body.forEach((demo, i) => {
+        bodyText.push(<p key={i}>{ demo }</p>)
+      });
+
+      demos.forEach((demo, i) => {
+        demoLinks.push(
+          <span key={i} className="highlight" onClick={this._handleClick.bind(this, demo)}>Live Demo</span>
+          );
+        });
 
     return  (
       <div className="projectInfoContainer">
         <img src={require(`../../assets/${ logo }`)} alt=""/>
-        <p>{ body }</p>
+        { bodyText }
+        <p>Stack used: { stackText }</p>
         <div className="demoLinks">
           { demoLinks }
         </div>
@@ -37,7 +44,8 @@ class ProjectInfo extends React.Component {
 
 ProjectInfo.propTypes = {
   logo: PropTypes.string,
-  body: PropTypes.string,
+  body: PropTypes.array,
+  stack: PropTypes.array,
   demos: PropTypes.array
 };
 

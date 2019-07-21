@@ -2,11 +2,8 @@
 
 .homeContainer {
     top: 55px;
-    bottom: 0;
-    left: 0;
-    right: 0;
     position: absolute;
-    background-color: $background;
+    background-color: $splashDark;
     .projectWrapper {
         display: flex;
         margin-top: 50px;

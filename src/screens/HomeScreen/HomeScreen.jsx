@@ -52,7 +52,8 @@ class HomeScreen extends React.Component {
       const infoProps = {
           body: projects[project].description,
           logo: projects[project].logo,
-          demos: projects[project].demos
+          demos: projects[project].demos,
+          stack: projects[project].stack,
         },
         screenshotProps = {
           screenshots: projects[project].screenshots[device]

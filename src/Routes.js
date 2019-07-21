@@ -25,7 +25,7 @@ class Routes extends React.Component {
     return (
       <Switch>
         <Route exact path="/" component={SplashScreen}/>
-        <Route exact path="/main" component={HomeScreen}/>
+        <Route path="/main" component={HomeScreen}/>
       </Switch>
     )
   }

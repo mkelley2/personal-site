@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import './styles.scss';
 
 class ContactForm extends React.Component {
@@ -11,7 +11,9 @@ class ContactForm extends React.Component {
   }
   render () {
     return  (
-      <div> ContactForm component!</div>
+      <div className="contactFormContainer">
+        <h2>Want to work <span className="highlight">together</span>?</h2>
+      </div>
     )
   }
 }
