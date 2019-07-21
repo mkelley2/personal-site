@@ -10,14 +10,24 @@ class ProjectScreenShot extends React.Component {
     };
   }
   render () {
+    let { screenshots } = this.props,
+      shots = [];
+
+      screenshots.forEach((screenshot, i) => {
+        shots.push(
+          <img key={i} src={require(`../../assets/${screenshot}`)} alt=""></img>
+        );
+      });
     return  (
-      <div> ProjectScreenShot component!</div>
+      <div className="projectScreenShot">
+       { shots }
+      </div>
     )
   }
 }
 
 ProjectScreenShot.propTypes = {
-
+  screenshots: PropTypes.array
 };
 
 export default ProjectScreenShot;

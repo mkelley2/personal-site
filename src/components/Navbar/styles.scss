@@ -1,0 +1,37 @@
+@import '../../styles/colors';
+
+.navContainer {
+    color: $eggshell;
+    background-color: $splashDark;
+    display: flex;
+    justify-content: space-between;
+    height: 25px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    .navLinks {
+        display: flex;
+        span {
+            font-weight: 900;
+            cursor: pointer;
+        }
+        &:not(.mobile) span {
+            margin-right: 20px;
+            &:last-of-type {
+                margin-right: 50px;
+            }
+        }
+        span:first-of-type {
+            color: $burntOrange;
+        }
+        &.mobile {
+            width: 100%;
+            justify-content: space-evenly;
+        }
+    }
+    .socialLinkContainer {
+        margin-left: 50px;
+    }
+}

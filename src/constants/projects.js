@@ -4,7 +4,12 @@ export const projects = {
         companyUrl: "https://cloudengage.com",
         projectTitle: "All Major Features",
         jobTitle: "Software Engineer",
-        screenshots: [],
+        screenshots: {
+            desktop: ["images/cloudengage.svg"],
+            mobile: ["images/mobile - Chord.png", "images/mobile - Evolve.png"]
+        },
+        logo: "logos/cloud-logo.png",
+        demos: ["https://retail.gocloudengage.com/", "https://auto.gocloudengage.com/"],
         stack: [
             {
                 text: "PhalconPHP",
@@ -59,7 +64,12 @@ export const projects = {
         companyUrl: null,
         projectTitle: "SimSync mod for Sims4",
         jobTitle: "Developer",
-        screenshots: ['delane/login.png', 'delane/friends.png', 'delane/servers.png'],
+        screenshots: {
+            desktop: ["images/simsync.svg"],
+            mobile: ["images/mobile - sims.png"]
+        },
+        logo: "logos/sim-logo.png",
+        demos: ["https://www.youtube.com/watch?v=l45jJ1LIyl0"],
         stack: [
             {
                 text: "React JS",

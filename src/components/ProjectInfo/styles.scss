@@ -1,0 +1,36 @@
+@import '../../styles/colors';
+
+.projectInfoContainer {
+    background-color: $projectDark;
+    display: flex;
+    flex-direction: column;
+    img {
+        height: 50px;
+        width: auto;
+        margin: 30px;
+        margin-bottom: 0;
+        align-self: flex-start;
+    }
+    p {
+        padding: 0 30px;
+    }
+    .demoLinks {
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        text-transform: uppercase;
+        margin: 30px;
+        margin-top: 20px;
+    }
+}
+
+.even .projectInfoContainer {
+    img {
+        align-self: flex-start;
+    }
+}
+.odd .projectInfoContainer {
+    img {
+        align-self: flex-end;
+    }
+}

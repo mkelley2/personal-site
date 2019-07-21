@@ -1,0 +1,9 @@
+@import '../../styles/colors';
+
+.socialLinkContainer {
+    display: flex;
+    height: 100%;
+    .logoContainer {
+        margin-right: 10px;
+    }
+}

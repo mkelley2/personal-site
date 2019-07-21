@@ -1,31 +1,9 @@
 @import '../../styles/colors';
 
 .logoContainer {
-    &.hasLink {
-        cursor: pointer;
-        img:hover {
-            box-shadow: none;
-            background-color: $seafoam;
-        }
-    }
-    display: flex;
-    flex-direction: column;
-    padding: 5px;
+    cursor: pointer;
+    height: 100%;
     img {
-        box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.5) inset;
-        height: 50px;
-        max-width: 110px;
-        background-color: aqua;
-        padding: 15px;
-        border-radius: 10px;
-
-    }
-    label {
-        margin-top: -20px;
-        color: black;
-        text-align: center;
-        font-size: .7em;
-        font-style: italic;
-        padding: 5px 15px;
+        height: 100%;
     }
 }

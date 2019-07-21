@@ -1,6 +1,7 @@
 import React from "react";
 // import PropTypes from 'prop-types';
 import './styles.scss';
+import { isMobile } from "react-device-detect";
 
 import { SocialLinks } from "../../components";
 
@@ -14,12 +15,12 @@ class Navbar extends React.Component {
   render () {
     return  (
       <div className="navContainer">
-        <SocialLinks />
-        <ul className="navLinks">
-          <li onClick={this._handleNavClick.bind(this,"projects")}>My Work</li>
-          <li onClick={this._handleNavClick.bind(this,"contact")}>Contact</li>
-          <li onClick={this._handleNavClick.bind(this,"resume")}>Resume</li>
-        </ul>
+        { !isMobile && <SocialLinks mode="light" /> }
+        <div className={ `navLinks ${ isMobile ? 'mobile': ''}` }>
+          <span onClick={this._handleNavClick.bind(this,"projects")}>My Work</span>
+          <span onClick={this._handleNavClick.bind(this,"contact")}>Contact</span>
+          <span onClick={this._handleNavClick.bind(this,"resume")}>Resume</span>
+        </div>
       </div>
     )
   }

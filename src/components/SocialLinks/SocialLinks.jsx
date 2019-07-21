@@ -2,6 +2,10 @@ import React from "react";
 import PropTypes from 'prop-types';
 import './styles.scss';
 
+import { Logo } from "../../components";
+
+import { socialLinks } from "../../constants/social";
+
 class SocialLinks extends React.Component {
   constructor(props) {
     super(props)
@@ -10,14 +14,32 @@ class SocialLinks extends React.Component {
     };
   }
   render () {
+    let { mode } = this.props,
+      logoCollection = [];
+
+    socialLinks.forEach((socialLink, i) => {
+      logoCollection.push(
+      <Logo
+        key={i}
+        src={socialLink.logo[mode]}
+        link={socialLink.link}
+      />
+      );
+    });
     return  (
-      <div> SocialLinks component!</div>
+      <div className="socialLinkContainer">
+        { logoCollection }
+      </div>
     )
   }
 }
 
-SocialLinks.propTypes = {
+SocialLinks.defaultProps = {
+  mode: "light"
+}
 
+SocialLinks.propTypes = {
+  mode: PropTypes.string
 };
 
 export default SocialLinks;
