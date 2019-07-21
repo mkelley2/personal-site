@@ -9,6 +9,8 @@ import ContactForm from './ContactForm';
 
 //form pieces
 import Button from './form/Button';
+import Input from './form/Input';
+import TextArea from './form/TextArea';
 
 //project
 import ProjectInfo from './ProjectInfo';
@@ -34,5 +36,7 @@ export {
   ProjectInfoMobile,
   ContactForm,
   ContactFormMobile,
+  Input,
+  TextArea,
   Button
 };

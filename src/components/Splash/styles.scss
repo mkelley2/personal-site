@@ -11,8 +11,11 @@
         margin-top: -110px;
         font-size: .9em;
 
-        button:first-of-type {
-            margin-right: 10px;
+        button {
+            width: 150px;
+            &:first-of-type {
+                margin-right: 10px;
+            }
         }
     }
 }
