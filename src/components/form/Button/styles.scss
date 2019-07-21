@@ -19,8 +19,9 @@ button {
   &:focus,
   &:active,
   &:hover {
-    background-color: $splashLight;
-    color: $splashDark;
+    background-color: $contactBackground;
+    color: $teal;
+    border-color: $teal;
     outline: none;
     box-shadow: none;
   }

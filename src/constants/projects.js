@@ -36,7 +36,7 @@ export const projects = {
             mobile: ["images/mobile - sims.png"]
         },
         logo: "logos/sim-logo.png",
-        demos: ["https://www.youtube.com/watch?v=l45jJ1LIyl0"],
+        demos: ["http://delane-studios.com/"],
         stack: [
             "React JS",
             "Electron",
