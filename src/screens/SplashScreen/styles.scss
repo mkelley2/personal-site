@@ -1,0 +1,9 @@
+@import '../../styles/colors';
+
+.splashScreenContainer {
+    background-color: $splashDark;
+    background-image: -webkit-linear-gradient(-55deg, #2B2E37 60%, #E2DAD3 50%);
+    background-position: 0px 50px;
+    background-repeat: no-repeat;
+    color: $eggshell;
+}

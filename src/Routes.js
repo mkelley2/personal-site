@@ -1,7 +1,7 @@
 import React from "react";
 import { Switch, Route, withRouter } from 'react-router';
 
-import { HomeScreen, ProjectScreen, ContactScreen } from './screens';
+import { HomeScreen, SplashScreen } from './screens';
 
 // const PrivateRoute = ({
 //   component: Component,
@@ -24,9 +24,8 @@ class Routes extends React.Component {
   render() {
     return (
       <Switch>
-        <Route exact path="/" component={HomeScreen}/>
-        <Route exact path="/projects" component={ProjectScreen}/>
-        <Route exact path="/contact" component={ContactScreen}/>
+        <Route exact path="/" component={SplashScreen}/>
+        <Route exact path="/main" component={HomeScreen}/>
       </Switch>
     )
   }
