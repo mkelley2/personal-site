@@ -19,3 +19,22 @@
         }
     }
 }
+
+@media (max-width: 600px) {
+    .splashWrapper {
+        .card {
+            h2 {
+                font-size: 2.2em;
+            }
+            button {
+                font-size: 1.5em;
+                width: 80%;
+                height: 70px;
+                margin-bottom: 10px;
+                &:first-of-type {
+                    margin-right: unset;
+                }
+            }
+        }
+    }
+}

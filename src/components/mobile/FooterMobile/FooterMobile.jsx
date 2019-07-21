@@ -2,6 +2,9 @@ import React from "react";
 // import PropTypes from 'prop-types';
 import './styles.scss';
 
+import { SocialLinks } from "../../../components";
+
+
 class FooterMobile extends React.Component {
   constructor(props) {
     super(props)
@@ -11,7 +14,13 @@ class FooterMobile extends React.Component {
   }
   render () {
     return  (
-      <div> FooterMobile component!</div>
+      <div className="footerMobileContainer">
+        <div className="info">
+          <span><span className="highlight">Phone:</span>503-709-2311</span>
+          <span><span className="highlight">Email:</span>mkelley1412@gmail.com</span>
+        </div>
+        <SocialLinks mode="dark"/>
+      </div>
     )
   }
 }

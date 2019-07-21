@@ -10,7 +10,7 @@ class ProjectInfo extends React.Component {
     };
   }
   render () {
-    let {logo, body, demos, stack } = this.props,
+    let { logo, body, demos, stack } = this.props,
       demoLinks = [],
       bodyText = [],
       stackText = stack.join(", ");
@@ -23,7 +23,7 @@ class ProjectInfo extends React.Component {
         demoLinks.push(
           <span key={i} className="highlight" onClick={this._handleClick.bind(this, demo)}>Live Demo</span>
           );
-        });
+      });
 
     return  (
       <div className="projectInfoContainer">

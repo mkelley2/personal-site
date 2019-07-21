@@ -19,7 +19,7 @@ class ProjectScreenShot extends React.Component {
         );
       });
     return  (
-      <div className="projectScreenShot">
+      <div className="projectScreenShotContainer">
        { shots }
       </div>
     )

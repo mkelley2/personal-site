@@ -1,0 +1,19 @@
+@import '../../../styles/colors';
+
+.projectScreenShotMobileContainer {
+    align-items: center;
+    background-color: $projectLight;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 15px;
+    .screenShotWrapper,
+    .demosWrapper {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .demosWrapper {
+        font-size: 1.2em;
+    }
+}

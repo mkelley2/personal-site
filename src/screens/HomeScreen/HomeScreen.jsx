@@ -54,10 +54,14 @@ class HomeScreen extends React.Component {
           screenshots: projects[project].screenshots[device]
         };
 
+        if (isMobile) {
+          screenshotProps.demos = projects[project].demos;
+        }
+
       let projectWrapper = (
         <div key={key} className={`projectWrapper ${(key%2 === 0) ? "even" : "odd"}`}>
-          { React.cloneElement(projectScreenShotComponent, screenshotProps) }
           { React.cloneElement(projectInfoComponent, infoProps) }
+          { React.cloneElement(projectScreenShotComponent, screenshotProps) }
         </div>
       );
 
@@ -66,7 +70,7 @@ class HomeScreen extends React.Component {
     }
 
     return  (
-      <div className="homeContainer">
+      <div className={ `homeContainer${ isMobile ? " mobile" : "" }` }>
         <Navbar
           handleClick={ this.scrollTo }/>
         <div className="projectsWrapper" ref={ this.projectSection }>
