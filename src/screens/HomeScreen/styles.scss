@@ -1,28 +1,24 @@
 @import '../../styles/colors';
 
 .homeContainer {
-    top: 0;
+    top: 55px;
     bottom: 0;
     left: 0;
     right: 0;
     position: absolute;
     background-color: $background;
-    padding-top: 55px;
-    .projectsWrapper {
-        margin-top: 100px;
-        .projectWrapper {
-            display: flex;
-            margin-top: 50px;
-            & > * {
-                width: 50%;
-            }
-            &.even {
-                padding-left: 50px;
-                flex-direction: row-reverse;
-            }
-            &.odd {
-                padding-right: 50px;
-            }
+    .projectWrapper {
+        display: flex;
+        margin-top: 50px;
+        & > * {
+            width: 50%;
+        }
+        &.even {
+            padding-left: 50px;
+            flex-direction: row-reverse;
+        }
+        &.odd {
+            padding-right: 50px;
         }
     }
 }

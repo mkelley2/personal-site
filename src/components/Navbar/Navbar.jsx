@@ -1,5 +1,5 @@
 import React from "react";
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import './styles.scss';
 import { isMobile } from "react-device-detect";
 
@@ -13,25 +13,24 @@ class Navbar extends React.Component {
     };
   }
   render () {
+    let { handleClick } = this.props;
+
     return  (
       <div className="navContainer">
         { !isMobile && <SocialLinks mode="light" /> }
         <div className={ `navLinks ${ isMobile ? 'mobile': ''}` }>
-          <span onClick={this._handleNavClick.bind(this,"projects")}>My Work</span>
-          <span onClick={this._handleNavClick.bind(this,"contact")}>Contact</span>
-          <span onClick={this._handleNavClick.bind(this,"resume")}>Resume</span>
+          <span name="projectSection" onClick={handleClick}>My Work</span>
+          <span name="contactSection" onClick={handleClick}>Contact</span>
+          <span name="resume" onClick={handleClick}>Resume</span>
         </div>
       </div>
     )
   }
 
-  _handleNavClick(destination) {
-console.log(destination)
-  }
 }
 
 Navbar.propTypes = {
-
+  handleClick: PropTypes.func
 };
 
 export default Navbar;

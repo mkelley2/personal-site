@@ -10,7 +10,7 @@ class Logo extends React.Component {
     };
   }
   render () {
-    let { src, link } = this.props;
+    let { src } = this.props;
     return  (
       <div onClick={ this._handleClick.bind(this) } className="logoContainer">
           <img src={ require(`../../assets/${ src }`) } alt=""/>

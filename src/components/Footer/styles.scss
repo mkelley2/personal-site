@@ -1,0 +1,16 @@
+@import '../../styles/colors';
+
+.footerContainer {
+    background-color: $projectLight;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .info {
+        display: flex;
+        flex-direction: column;
+    }
+    .socialLinkContainer {
+        height: 40px;
+    }
+}
