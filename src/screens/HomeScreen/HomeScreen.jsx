@@ -77,7 +77,7 @@ class HomeScreen extends React.Component {
           { allProjects }
         </div>
         <div className="contactWrapper" ref={ this.contactSection }>
-          { contactComponent }
+          {/* { contactComponent } */}
         </div>
         <div className="footerWrapper">
           { footerComponent }
