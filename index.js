@@ -14,10 +14,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.post('/api/form', (req, res) => {
-    console.log(req.body);
     nodemailer.createTestAccount((err, account) => {
         if (err) {
-            console.log(err);
+            console.log("Error:", err);
         }
         const htmlEmail = `
         <h3>Contact Details</h3>
@@ -27,7 +26,7 @@ app.post('/api/form', (req, res) => {
         </ul>
         <p>Message: ${req.body.message}</p>
         `;
-        console.log(process.env.GMAIL, process.env.PASS)
+
         let transporter = nodemailer.createTransport({
             service: "gmail",
             auth: {
@@ -38,7 +37,7 @@ app.post('/api/form', (req, res) => {
 
         let mailOptions = {
             from: req.body.email,
-            to: 'mkelley1412@gmail.com',
+            to: process.env.GMAIL,
             replyTo: req.body.email,
             subject: 'Contact Form Submission',
             text: req.body.message,
@@ -47,10 +46,12 @@ app.post('/api/form', (req, res) => {
 
         transporter.sendMail(mailOptions, (err, info) => {
             if (err) {
-                return console.log(err);
+                return console.log("Error:", err);
             }
-        })
+            return info.message;
+        });
     })
+    res.send();
 });
 
 const PORT = process.env.PORT || 3001;

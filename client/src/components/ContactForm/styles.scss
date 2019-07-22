@@ -13,4 +13,11 @@
     .formWrapper {
         width: 65%;
     }
+    .loading {
+        margin-top: 100px;
+    }
+    .submitted {
+        max-width: 400px;
+        color: $burntOrange;
+    }
 }
