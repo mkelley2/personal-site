@@ -17,14 +17,14 @@ class Splash extends React.Component {
       <div className="splashWrapper">
         <div className="card">
           <h2>Hello, I'm <span className="highlight">Matthew Kelley</span></h2>
-          <h3>Welcome to my portfolio</h3>
+          <h3>I am a full stack developer passionate about technology</h3>
           <Button
-            text="Check out my work"
-            name="projects"
+            text="My work"
+            name="projectSection"
             handleClick={handleClick}/>
           <Button
-            text="How to contact"
-            name="contact"
+            text="Contact"
+            name="contactSection"
             handleClick={handleClick}/>
         </div>
       </div>

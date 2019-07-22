@@ -1,0 +1,21 @@
+@import '../../styles/colors';
+
+.footerContainer {
+    background-color: $projectLight;
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    box-sizing: border-box;
+    .info {
+        display: flex;
+        flex-direction: column;
+        :first-child {
+            margin-bottom: 5px;
+        }
+    }
+    .socialLinkContainer {
+        height: 40px;
+    }
+}

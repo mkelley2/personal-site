@@ -10,11 +10,10 @@ class Logo extends React.Component {
     };
   }
   render () {
-    let { src, title, link } = this.props;
+    let { src } = this.props;
     return  (
-      <div onClick={this._handleClick.bind(this)} className={`logoContainer ${!!link ? "hasLink": ""}`}>
-          <img src={ require(`../../images/logos/${src}`) } alt={ title }/>
-          {title && <label>{ title }</label>}
+      <div onClick={ this._handleClick.bind(this) } className="logoContainer">
+          <img src={ require(`../../assets/${ src }`) } alt=""/>
       </div>
     )
   }
@@ -22,7 +21,6 @@ class Logo extends React.Component {
   _handleClick(e) {
     let { link } = this.props;
     if (link) {
-      console.log("Dasd");
       window.open(link, "_blank");
     }
   }
@@ -30,7 +28,7 @@ class Logo extends React.Component {
 
 Logo.propTypes = {
   src: PropTypes.string.isRequired,
-  title: PropTypes.string
+  link: PropTypes.string.isRequired
 };
 
 export default Logo;

@@ -1,0 +1,51 @@
+@import '../../../styles/colors';
+
+.textAreaContainer {
+  position: relative;
+  height: 250px;
+  margin: 5px auto 5px;
+
+  textarea {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: $contactBackground;
+    width: 100%;
+    min-width: 150px;
+    height: 250px;
+    padding: 15px;
+    box-sizing: border-box;
+    border-radius: 1px;
+    border: none;
+    color: $burntOrange;
+    font-size: 14px;
+
+    &::placeholder {
+      color: $burntOrange;
+    }
+    &:focus {
+      outline-style:none;
+      box-shadow:none;
+      border: solid 1px $teal;
+      color: $teal;
+    }
+  }
+
+  .error-text {
+    display: none;
+  }
+}
+
+.textAreaContainer.has-error {
+  textarea {
+    border-color: $coral;
+  }
+
+  .error-text {
+    display: inherit;
+    font-size: .7em;
+    color: $coral;
+    margin: 0;
+    margin-top: 5px;
+  }
+}

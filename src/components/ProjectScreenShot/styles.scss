@@ -1,0 +1,8 @@
+@import '../../styles/colors';
+
+.projectScreenShotContainer {
+    align-items: center;
+    background-color: $projectLight;
+    display: flex;
+    justify-content: center;
+}

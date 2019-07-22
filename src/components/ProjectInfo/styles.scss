@@ -1,0 +1,43 @@
+@import '../../styles/colors';
+
+.projectInfoContainer {
+    background-color: $projectDark;
+    display: flex;
+    flex-direction: column;
+    img {
+        max-height: 50px;
+        width: auto;
+        max-width: 200px;
+        margin: 30px;
+        margin-bottom: 0;
+        align-self: flex-start;
+
+    }
+    p {
+        padding: 0 30px;
+        margin-bottom: 5px;
+    }
+    .demoLinks {
+        cursor: pointer;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        text-transform: uppercase;
+        margin: 30px;
+        margin-top: 20px;
+        span:hover {
+            font-weight: 900;
+        }
+    }
+}
+
+.even .projectInfoContainer {
+    img {
+        align-self: flex-start;
+    }
+}
+.odd .projectInfoContainer {
+    img {
+        align-self: flex-end;
+    }
+}

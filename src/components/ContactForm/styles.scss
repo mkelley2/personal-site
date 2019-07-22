@@ -1,0 +1,16 @@
+@import '../../styles/colors';
+
+.contactFormContainer {
+    background-color: $splashDark;
+    color: $white;
+    height: 600px;
+    margin-top: -200px;
+    padding-top: 250px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .formWrapper {
+        width: 65%;
+    }
+}

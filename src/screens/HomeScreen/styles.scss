@@ -1,0 +1,30 @@
+@import '../../styles/colors';
+
+.homeContainer {
+    top: 55px;
+    position: absolute;
+    background-color: $splashDark;
+    background: -webkit-linear-gradient(top, $splashDark, $splashDark 30%, $white 30%, $white);
+    background-position: 0 -200px;
+    width: 100%;
+    &:not(.mobile) .projectWrapper {
+        display: flex;
+        margin-top: 50px;
+        & > * {
+            width: 50%;
+        }
+        &.even {
+            margin-left: 50px;
+        }
+        &.odd {
+            margin-right: 50px;
+            flex-direction: row-reverse;
+        }
+    }
+    .mobile .projectWrapper {
+        margin-bottom: 25px;
+    }
+    .projectWrapper {
+        box-shadow: 0px 2px 4px rgba(0,0,0, 0.5);
+    }
+}

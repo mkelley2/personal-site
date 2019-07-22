@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import './styles.scss';
 
 class Blank extends React.Component {
@@ -9,8 +9,8 @@ class Blank extends React.Component {
 
     };
   }
-  render () { 
-    return  ( 
+  render () {
+    return  (
       <div> Blank component!</div>
     )
   }
@@ -19,5 +19,5 @@ class Blank extends React.Component {
 Blank.propTypes = {
 
 };
- 
+
 export default Blank;

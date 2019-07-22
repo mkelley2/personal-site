@@ -1,38 +1,11 @@
 @import './colors';
-@import url('https://fonts.googleapis.com/css?family=Merriweather&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700,900,900i&display=swap');
 
 body {
-    background-color: $slate;
-    color: $white;
-    font-family: 'Merriweather', serif;
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+}
 
-    .appContainer {
-        height: 100%;
-        width: 800px;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        position: absolute;
-        margin: 0 auto;
-
-        a {
-            color: inherit;
-            &:hover {
-                color: $active;
-            }
-        }
-
-        .highlight {
-            color: $coral;
-        }
-
-        .nav-back {
-            margin: 20px;
-            cursor: pointer;
-            position: fixed;
-            top: 0;
-            left: 30px;
-        }
-    }
+.highlight {
+    color: $highlight !important;
 }
