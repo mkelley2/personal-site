@@ -21,7 +21,7 @@ class HomeScreen extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      scrollToContactOnLoad: this.props.location.state.scrollToContactOnLoad
+
     };
     this.projectSection = React.createRef();
     this.contactSection = React.createRef();
@@ -30,7 +30,7 @@ class HomeScreen extends React.Component {
   }
 
   componentDidMount() {
-    if (this.state.scrollToContactOnLoad) {
+    if (this.props.location.state && this.props.location.state.scrollToContactOnLoad) {
       this._scrollTo("contactSection");
     }
   }
@@ -77,7 +77,7 @@ class HomeScreen extends React.Component {
           { allProjects }
         </div>
         <div className="contactWrapper" ref={ this.contactSection }>
-          {/* { contactComponent } */}
+          { contactComponent }
         </div>
         <div className="footerWrapper">
           { footerComponent }

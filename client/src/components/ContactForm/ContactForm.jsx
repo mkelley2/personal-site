@@ -1,6 +1,7 @@
 import React from "react";
 // import PropTypes from 'prop-types';
 import './styles.scss';
+import axios from "axios";
 
 import {Input, Button, TextArea} from "../../components";
 
@@ -55,8 +56,14 @@ class ContactForm extends React.Component {
     this.setState(newState);
   }
 
-  _handleSubmit() {
+  async _handleSubmit() {
+    let { name, email, message } = this.state;
 
+    const form = await axios.post('/api/form', {
+      name,
+      email,
+      message
+    })
   }
 }
 
