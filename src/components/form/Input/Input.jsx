@@ -10,17 +10,18 @@ class Input extends React.Component {
     };
   }
   render () {
-    let { placeholder, type, value, onChange, name } = this.props;
+    let { placeholder, type, value, onChange, name, required } = this.props;
     return  (
       <div className="inputContainer">
-        <input name={ name } placeholder={ placeholder } type={ type } value={ value } onChange={ onChange } />
+        <input name={ name } placeholder={ placeholder } type={ type } value={ value } onChange={ onChange } required={ required } />
       </div>
     )
   }
 }
 
 Input.defaultProps = {
-  type: "text"
+  type: "text",
+  required: false
 }
 
 Input.propTypes = {
@@ -28,7 +29,8 @@ Input.propTypes = {
   type: PropTypes.string,
   name: PropTypes.string.isRequired,
   value: PropTypes.string.isRequired,
-  onChange: PropTypes.func.isRequired
+  onChange: PropTypes.func.isRequired,
+  required: PropTypes.bool
 };
 
 export default Input;
