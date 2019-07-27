@@ -22,17 +22,18 @@ class ContactFormMobile extends React.Component {
     return  (
       <div className="contactFormmobileContainer">
         <h2>Want to work <span className="highlight">together</span>?</h2>
-
-        <div className="formWrapper">
+        <form className="formWrapper" method="POST" action="https://formspree.io/mkelley1412@gmail.com">
           <Input
+            required={ true }
             placeholder="Name"
             type="text"
             value={ this.state.form.name }
             name="name"
             onChange={this.handleInputChange} />
           <Input
+            required={ true }
             placeholder="Email"
-            type="text"
+            type="email"
             value={ this.state.form.email }
             name="email"
             onChange={ this.handleInputChange } />
@@ -45,7 +46,7 @@ class ContactFormMobile extends React.Component {
             text="Submit"
             handleClick={this.handleSubmit}
             name="submit" />
-        </div>
+        </form>
       </div>
     )
   }
@@ -56,8 +57,8 @@ class ContactFormMobile extends React.Component {
     this.setState(newState);
   }
 
-  _handleSubmit() {
-
+  _handleSubmit(e) {
+    console.log("Submitting to form spree, about to redirect");
   }
 }
 
