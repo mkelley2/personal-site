@@ -57,7 +57,7 @@ class ContactForm extends React.Component {
   }
 
   _handleSubmit(e) {
-    console.log(arguments);
+    console.log("Submitting to form spree, about to redirect");
   }
 }
 
